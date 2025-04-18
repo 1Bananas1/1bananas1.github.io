@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>OAuth Redirect</title>
+  <script>
+    // Get the authorization code from URL parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    const code = urlParams.get('code');
+    const state = urlParams.get('state');
+    const error = urlParams.get('error');
+    
+    // Redirect back to Expo Go app
+    window.location.replace(`exp://192.168.8.178:8081/--/oauth2callback?code=${code}&state=${state}&error=${error}`);
+  </script>
+</head>
+<body>
+  <p>Redirecting back to the app...</p>
+</body>
+</html>
