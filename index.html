@@ -9,11 +9,144 @@
     const state = urlParams.get('state');
     const error = urlParams.get('error');
     
-    // Redirect back to Expo Go app
-    window.location.replace(`exp://192.168.8.178:8081/--/oauth2callback?code=${code}&state=${state}&error=${error}`);
+    // Log the parameters we received (for debugging)
+    console.log('Received code:', code);
+    console.log('Received state:', state);
+    console.log('Received error:', error);
+    
+    // Exchange the code for tokens directly
+    if (code) {
+      // Define Google OAuth client details
+      const clientId = '880381642199-8qkv8kc46720nbikkvs013isf8fa5g5n.apps.googleusercontent.com';
+      const redirectUri = 'https://1bananas1.github.io';
+      
+      // Make the token request
+      fetch('https://oauth2.googleapis.com/token', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: new URLSearchParams({
+          code: code,
+          client_id: clientId,
+          // Don't include client_secret in client-side code
+          redirect_uri: redirectUri,
+          grant_type: 'authorization_code',
+        }),
+      })
+      .then(response => response.json())
+      .then(data => {
+        console.log('Token response received');
+        
+        if (data.error) {
+          console.error('Error from token endpoint:', data.error);
+          document.getElementById('status').textContent = 'Authentication failed: ' + data.error_description || data.error;
+          return;
+        }
+        
+        // Get user info
+        fetch('https://www.googleapis.com/oauth2/v3/userinfo', {
+          headers: {
+            'Authorization': `Bearer ${data.access_token}`
+          }
+        })
+        .then(response => response.json())
+        .then(userInfo => {
+          console.log('User info received');
+          
+          // Store the tokens and user info in localStorage
+          localStorage.setItem('auth_token', data.access_token);
+          if (data.refresh_token) {
+            localStorage.setItem('refresh_token', data.refresh_token);
+          }
+          localStorage.setItem('user', JSON.stringify({
+            id: userInfo.sub,
+            email: userInfo.email,
+            name: userInfo.name,
+            picture: userInfo.picture,
+            given_name: userInfo.given_name,
+            family_name: userInfo.family_name,
+            email_verified: userInfo.email_verified,
+            provider: 'google',
+          }));
+          
+          document.getElementById('status').textContent = 'Authentication successful! You can close this page and return to the app.';
+          document.getElementById('user-info').textContent = `Logged in as: ${userInfo.name} (${userInfo.email})`;
+        })
+        .catch(error => {
+          console.error('Error getting user info:', error);
+          document.getElementById('status').textContent = 'Failed to get user information';
+        });
+      })
+      .catch(error => {
+        console.error('Error exchanging code for token:', error);
+        document.getElementById('status').textContent = 'Failed to complete authentication';
+      });
+    } else if (error) {
+      console.error('Authentication error:', error);
+      document.getElementById('status').textContent = 'Authentication error: ' + error;
+    }
   </script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 50px;
+      background-color: #F4A460;
+      color: white;
+    }
+    .card {
+      background-color: white;
+      border-radius: 10px;
+      padding: 30px;
+      max-width: 500px;
+      margin: 0 auto;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      color: #333;
+    }
+    h1 {
+      color: #4A8C35;
+    }
+    #status {
+      margin: 20px 0;
+      font-weight: bold;
+    }
+    #user-info {
+      margin-top: 10px;
+      padding: 10px;
+      background-color: #f5f5f5;
+      border-radius: 5px;
+    }
+    .button {
+      background-color: #4A8C35;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
-  <p>Redirecting back to the app...</p>
+  <div class="card">
+    <h1>FlavorAI Authentication</h1>
+    <p id="status">Processing authentication...</p>
+    <p id="user-info"></p>
+    <button id="close-button" class="button" style="display: none;">Return to App</button>
+  </div>
+  
+  <script>
+    // Add event listener for the close button
+    document.getElementById('close-button').addEventListener('click', function() {
+      window.close();
+    });
+    
+    // Show the close button once authentication is complete
+    setTimeout(() => {
+      document.getElementById('close-button').style.display = 'block';
+    }, 3000);
+  </script>
 </body>
 </html>
