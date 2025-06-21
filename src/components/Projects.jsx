@@ -14,7 +14,7 @@ function Projects() {
             <div className="md:col-span-5 md:col-start-1 md:row-start-1">
               <img
                 className="w-full mt-8 mb-16 p-4 border-l border-t border-swash-4 rounded-[25px] md:mt-0"
-                src="https://http.cat/404"
+                src="img\flavorAI.webp"
                 alt="FlavorAI screenshot"
               />
             </div>
