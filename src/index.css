@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap");
+@import "tailwindcss";
+
+/* Tailwind v4 Theme Configuration */
+@theme {
+  /* Custom Colors */
+  --color-dark-blue: #0c0f40;
+  --color-swash-2: #0a0b26;
+  --color-swash-3: #031ca6;
+  --color-swash-4: #0d2d8c;
+  --color-swash-5: #0d2673;
+
+  /* Custom Fonts */
+  --font-family-inter: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-family-manrope: "Manrope", ui-sans-serif, system-ui, sans-serif;
+
+  /* Custom Font Sizes */
+  --font-size-base: 1.3rem;
+}
+
+/* Custom utility classes */
+@layer components {
+  .gradient {
+    background: linear-gradient(
+      90deg,
+      var(--color-swash-4) 0%,
+      rgb(171, 165, 212) 100%
+    );
+    height: 2px;
+  }
+
+  .intro-section {
+    @apply px-4 py-16 pb-40 max-w-6xl mx-auto;
+
+    p {
+      @apply text-base leading-relaxed;
+    }
+  }
+
+  .button {
+    @apply bg-swash-5 px-2 py-1 rounded-[5px] hover:text-white hover:bg-swash-4;
+  }
+}
+
+/* Regular CSS - not in @layer */
+.projects {
+  padding: 1rem 4rem;
+}
+
+.projects h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3.75rem;
+}
+
+.projects h3 {
+  color: white;
+}
+
+.projects img {
+  margin: 2rem 0 4rem 0;
+  padding: 1rem;
+  border-left: 1px solid var(--color-swash-4);
+  border-top: 1px solid var(--color-swash-4);
+  border-radius: 25px;
+}
+
+@layer base {
+  html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+
+  body {
+    @apply p-0 m-0 text-white;
+    font-family: var(--font-sans);
+    background-color: var(--color-swash-2);
+    font-size: 1.3rem;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply m-0;
+  }
+
+  a {
+    color: var(--color-swash3);
+
+    &:hover {
+      color: var(--color-swash4);
+      @apply no-underline;
+    }
+  }
+
+  img {
+    @apply w-full;
+  }
+}
