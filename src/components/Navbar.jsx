@@ -1,7 +1,7 @@
-import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLaptopCode } from "@fortawesome/free-solid-svg-icons";
-import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { Link } from 'react-router-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLaptopCode } from '@fortawesome/free-solid-svg-icons'
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
 function Navbar() {
   return (
@@ -23,22 +23,21 @@ function Navbar() {
           </h1>
         </li>
         <li>
-          <Link to="/">
-            <a
-              href="#projects"
-              className="text-white no-underline block hover:text-swash-4"
-            >
-              Projects
-            </a>
+          <Link
+            to="/"
+            className="text-white no-underline block hover:text-swash-4"
+          >
+            Home
           </Link>
         </li>
         <li>
-          <Link
-            to="#resume"
+          <a
+            href="https://drive.google.com/file/d/12rDL5YZhfqcYOLJpf4p62XLCNAJaFvyY/view?usp=sharing"
+            target="_blank"
             className="bg-swash-5 px-2 py-1 rounded text-white no-underline hover:bg-swash-4 hover:text-white"
           >
             Resume
-          </Link>
+          </a>
         </li>
         <li>
           <Link
@@ -81,7 +80,7 @@ function Navbar() {
         </li>
       </ul>
     </nav>
-  );
+  )
 }
 
-export default Navbar;
+export default Navbar

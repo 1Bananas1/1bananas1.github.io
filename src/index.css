@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap");
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap');
+@import 'tailwindcss';
 
 /* Tailwind v4 Theme Configuration */
 @theme {
@@ -11,8 +11,8 @@
   --color-swash-5: #0d2673;
 
   /* Custom Fonts */
-  --font-family-inter: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-family-manrope: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-family-inter: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-family-manrope: 'Manrope', ui-sans-serif, system-ui, sans-serif;
 
   /* Custom Font Sizes */
   --font-size-base: 1.3rem;
@@ -64,6 +64,20 @@
   border-radius: 25px;
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out forwards;
+}
 @layer base {
   html {
     box-sizing: border-box;
