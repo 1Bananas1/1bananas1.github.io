@@ -14,7 +14,7 @@ export const classesData = [
     school: 'Mizzou',
     classTakenName: 'Matrix Theory/Linear Algebra',
     bgColor: '#000000',
-    date: 'Current',
+    date: 'Summer 2025',
     description:
       'Basic properties of matrices, determinants, vector spaces, linear transformations, eigenvalues, diagonalization, the inner product, and orthogonality. The course also includes an introduction to writing proofs.',
     tags: ['Mathematics', 'Linear Algebra'],
@@ -68,6 +68,17 @@ export const classesData = [
     description:
       'A rigorous introduction to programming using an object-oriented language, including use of variables, control structures, existing classes and functions and recursion, as well as user-defined functions and classes. Good software development practices will also be established, including issues of design, documentation, and testing.',
     tags: ['Computer Science', 'Fundamentals'],
+  },
+  {
+    id: 'react-native-v3',
+    school: 'Frontend Masters',
+    classTakenName: 'React Native v3',
+    bgColor: '#c02d28',
+    date: 'Summer 2025',
+    description:
+      'Use React skills to build feature-rich, native mobile apps for iOS and Android using React Native and Expo. Learn to create UI components like custom buttons and scrollable lists, implement navigation between screens, and persist data using AsyncStorage. Apply your skills by building practical projects such as a shopping list app and a recurring reminder system with push notifications!',
+    tags: ['Bootcamp', 'React'],
+    githubURL: 'https://github.com/1Bananas1/taskly',
   },
 ]
 // cls could be named literally anything but it just stands for class

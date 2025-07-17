@@ -1,3 +1,6 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
+
 function ClassCard({
   school,
   classTakenName,
@@ -18,9 +21,20 @@ function ClassCard({
       style={isHexColor ? { backgroundColor: bgColor } : {}}
     >
       <div className="mb-4">
-        <h3 className="text-2xl font-semibold text-white mb-2">
-          {classTakenName}
-        </h3>
+        <div className="flex justify-between items-center mb-2">
+          <h3 className="text-2xl font-semibold text-white">
+            {classTakenName}
+          </h3>
+          {githubURL && (
+            <a href={githubURL} target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon
+                icon={faGithub}
+                className="text-white hover:text-gray-300 transition-colors text-xl"
+                aria-hidden="true"
+              />
+            </a>
+          )}
+        </div>
         <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2">
           <p className="text-lg text-gray-200">{school}</p>
           <p className="text-sm text-gray-300">{date}</p>
