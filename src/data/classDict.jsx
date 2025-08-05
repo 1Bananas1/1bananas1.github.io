@@ -70,6 +70,46 @@ export const classesData = [
     tags: ['Computer Science', 'Fundamentals'],
   },
   {
+    id: 'intro-btm',
+    school: 'Saint Louis University',
+    classTakenName: 'Intro to Bus Technology Mgmt',
+    bgColor: '#003DA5',
+    date: 'Fall 2023',
+    description:
+      'An introduction to the development, implementation and use of information systems in organizations. Major topics include: the creation, storage, and usage of data; the application of information systems in organizations and functional areas; information security; IT trends; business analytics; enterprise systems; and the role of IT in supply chain management.',
+    tags: ['Business Technology Management', 'BTM'],
+  },
+  {
+    id: 'btm-2500',
+    school: 'Saint Louis University',
+    classTakenName: 'Data Analysis',
+    bgColor: '#003DA5',
+    date: 'Spring 2024',
+    description:
+      'This course covers the complete business analytics data lifecycle, teaching students to build relational databases, write SQL queries, and apply advanced Excel skills for data cleaning, analysis, and consolidation. Students will also learn data visualization techniques using specialized software to effectively present analytical results.',
+    tags: ['Business Technology Management', 'BTM'],
+  },
+  {
+    id: 'business-analytics',
+    school: 'Saint Louis University',
+    classTakenName: 'Business Analytics',
+    bgColor: '#003DA5',
+    date: 'Fall 2024',
+    description:
+      'This course advances beyond BTM 2500, focusing on three key areas: data cleaning and preparation using OpenRefine and R, advanced visualization development with Tableau and R for data storytelling, and predictive analytics techniques including regression and decision trees to predict business events and solve business problems.',
+    tags: ['Business Technology Management', 'BTM'],
+  },
+  {
+    id: 'ml-business-analytics',
+    school: 'Saint Louis University',
+    classTakenName: 'Machine Learning Business Analytics',
+    bgColor: '#003DA5',
+    date: 'Spring 2025',
+    description:
+      'This course teaches core machine learning concepts and techniques for extracting insights from large structured and unstructured datasets to solve complex business problems. Students will use R to apply ML algorithms across various business domains including healthcare, supply chain, and banking to improve decision-making and gain valuable business insights.',
+    tags: ['Business Technology Management', 'BTM'],
+  },
+  {
     id: 'react-native-v3',
     school: 'Frontend Masters',
     classTakenName: 'React Native v3',
