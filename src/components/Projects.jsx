@@ -6,6 +6,57 @@ function Projects() {
         <h2 className="text-5xl mb-16 font-normal text-white px-4">
           Projects I'm Proud Of
         </h2>
+        <h4 className="text-base font-mono mb-4 ml-4 text-white">
+          Latest Projects
+        </h4>
+        <article className="mb-16 relative">
+          <div className="grid grid-cols-1 md:grid-cols-10 items-start">
+            {/* Text content */}
+
+            <div className="md:col-span-7 md:col-start-1 md:row-start-1 md:relative md:z-10 px-4 text-left order-2 md:order-1">
+              <a
+                href="https://github.com/1Bananas1/FL-Studio-RP"
+                target="_blank"
+              >
+                <h3 className="text-3xl mb-6 text-white font-normal">
+                  FL Studio Rich Presence
+                </h3>
+              </a>
+
+              <div className="bg-swash-2 p-4 rounded-[10px] mb-6 shadow-lg">
+                <p className="text-base leading-relaxed text-white">
+                  What sprawled from a small thought quickly turned into me
+                  powering a community of music makers to show off their
+                  talents. Powered by C++, FL Studio Rich Presence utilizes
+                  inter-process communication to show off their activity inside
+                  FL Studio.
+                </p>
+              </div>
+              <h4 className="text-base font-mono mb-4 text-white">
+                Things I learned along the way
+              </h4>
+              <ul className="list-none p-0 m-0 flex flex-wrap justify-start gap-4 text-base">
+                <li className="text-white">Windows API</li>
+                <li className="text-white">C++</li>
+                <li className="text-white">Parsing</li>
+                <li className="text-white">Installers</li>
+              </ul>
+            </div>
+            {/* Image spans to edge */}
+            <div className="md:col-span-6 md:col-start-6 md:row-start-1 order-1 md:order-2">
+              <a
+                href="https://github.com/1Bananas1/FL-Studio-RP"
+                target="_blank"
+              >
+                <img
+                  className="w-full mt-8 mb-16 p-4 border-l border-t border-swash-4 rounded-[25px] md:mt-0"
+                  src="img\FLRP.webp"
+                  alt="FL Studio Rich Presence thumbnail"
+                />
+              </a>
+            </div>
+          </div>
+        </article>
 
         {/* FlavorAI Project - Full width container */}
         <article className="mb-16 relative">
@@ -21,11 +72,8 @@ function Projects() {
 
             {/* Text content overlaps image - extends to right edge */}
             <div className="md:col-span-6 md:col-start-5 md:row-start-1 md:relative md:z-10 pr-4 md:pr-8 text-right">
-              <h4 className="text-base font-mono mb-4 text-white">
-                Latest Projects
-              </h4>
               <h4 className="text-white">
-                🏆{" "}
+                🏆{' '}
                 <span class="italic">
                   <a
                     href="https://gdg.community.dev/events/details/google-gdg-on-campus-washington-university-in-st-louis-st-louis-united-states-presents-devfest-washu-2025/"
@@ -98,7 +146,7 @@ function Projects() {
         </article>
       </section>
     </div>
-  );
+  )
 }
 
-export default Projects;
+export default Projects
