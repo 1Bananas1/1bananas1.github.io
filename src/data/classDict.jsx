@@ -97,7 +97,7 @@ export const classesData = [
     date: 'Fall 2024',
     description:
       'This course advances beyond BTM 2500, focusing on three key areas: data cleaning and preparation using OpenRefine and R, advanced visualization development with Tableau and R for data storytelling, and predictive analytics techniques including regression and decision trees to predict business events and solve business problems.',
-    tags: ['Business Technology Management', 'BTM'],
+    tags: ['Business Technology Management', 'BTM', 'AI'],
   },
   {
     id: 'ml-business-analytics',
@@ -107,7 +107,7 @@ export const classesData = [
     date: 'Spring 2025',
     description:
       'This course teaches core machine learning concepts and techniques for extracting insights from large structured and unstructured datasets to solve complex business problems. Students will use R to apply ML algorithms across various business domains including healthcare, supply chain, and banking to improve decision-making and gain valuable business insights.',
-    tags: ['Business Technology Management', 'BTM'],
+    tags: ['Business Technology Management', 'BTM', 'AI'],
   },
   {
     id: 'react-native-v3',
@@ -120,6 +120,56 @@ export const classesData = [
     tags: ['Bootcamp', 'React'],
     githubURL: 'https://github.com/1Bananas1/taskly',
   },
+  {
+    id: 'database-systems',
+    school: 'Hanyang University',
+    classTakenName: 'Database Systems',
+    bgColor: '#1D2475',
+    date: 'Fall 2025',
+    description:
+      'Comprehensive introduction to DBMS principles, design & application. Covers Entity-Relationship modeling, relational database design, SQL mastery, normalization theory, indexing strategies, data storage optimization, transaction management & concurrency control. Hands-on experience building database-driven applications.',
+    tags: ['SQL', 'Databases', 'BTM', 'Computer Science'],
+  },
+  {
+    id: 'software-engineering',
+    school: 'Hanyang University',
+    classTakenName: 'Software Engineering',
+    bgColor: '#1D2475',
+    date: 'Fall 2025',
+    description:
+      'Industry collaboration with LG Electronics developing innovative appliance services. Covers software lifecycle, requirements analysis, UML modeling, system architecture, testing & project management. Major group project presenting to partner companies with potential internship opportunities.',
+    tags: ['Computer Science'],
+  },
+  {
+    id: 'NLP',
+    school: 'Hanyang University',
+    classTakenName: 'Natural Language Processing',
+    bgColor: '#1D2475',
+    date: 'Fall 2025',
+    description:
+      'Master fundamental NLP concepts from word vectors to large language models. Covers neural networks, RNNs, transformers, seq2seq, attention mechanisms, language generation, question answering & multilingual processing. Practical implementation experience with cutting-edge AI technologies like ChatGPT.',
+    tags: ['Computer Science', 'AI'],
+  },
+  {
+    id: 'prob-and-stats',
+    school: 'Hanyang University',
+    classTakenName: 'Probability and Statistics',
+    bgColor: '#1D2475',
+    date: 'Fall 2025',
+    description:
+      'Statistical methodology for data interpretation and analysis in urban planning processes. Covers descriptive statistics, probability theory, estimation, and hypothesis testing at pre-calculus level. Foundation for understanding data analysis techniques used in planning and engineering applications.',
+    tags: ['Fundamentals', 'Statistics'],
+  },
+  // {
+  //   id: '',
+  //   school: 'Hanyang University',
+  //   classTakenName: '',
+  //   bgColor: '#1D2475',
+  //   date: 'Fall 2025',
+  //   description:
+  //     '',
+  //   tags: [],
+  // },
 ]
 // cls could be named literally anything but it just stands for class
 export const getClassesBySchool = (school) => {

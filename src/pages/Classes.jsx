@@ -2,22 +2,25 @@ import { useState } from 'react'
 import ClassCard from '../components/ClassCard'
 import ClassSearch from '../components/ClassSearch'
 import { classesData } from '../data/classDict.jsx'
+import { parseDateString } from '../utils/dateUtils.js'
 
 function Classes() {
   const [searchTerm, setSearchTerm] = useState('')
 
-  const filteredClasses = classesData.filter((classInfo) => {
-    const searchLower = searchTerm.toLowerCase()
+  const filteredClasses = classesData
+    .filter((classInfo) => {
+      const searchLower = searchTerm.toLowerCase()
 
-    const nameMatches = classInfo.classTakenName
-      .toLowerCase()
-      .includes(searchLower)
-    const tagMatches = classInfo.tags.some((tag) =>
-      tag.toLowerCase().includes(searchLower)
-    )
+      const nameMatches = classInfo.classTakenName
+        .toLowerCase()
+        .includes(searchLower)
+      const tagMatches = classInfo.tags.some((tag) =>
+        tag.toLowerCase().includes(searchLower)
+      )
 
-    return nameMatches || tagMatches
-  })
+      return nameMatches || tagMatches
+    })
+    .sort((a, b) => parseDateString(b.date) - parseDateString(a.date))
 
   return (
     <div className="py-16 px-4">
