@@ -160,6 +160,37 @@ export const classesData = [
       'Statistical methodology for data interpretation and analysis in urban planning processes. Covers descriptive statistics, probability theory, estimation, and hypothesis testing at pre-calculus level. Foundation for understanding data analysis techniques used in planning and engineering applications.',
     tags: ['Fundamentals', 'Statistics'],
   },
+  {
+    id: 'oop-sw-design',
+    school: 'Saint Louis University',
+    classTakenName: 'Object Oriented Programming Software Design',
+    bgColor: '#003DA5',
+    date: 'Spring 2026',
+    description:
+      'An implementation-based study of object-oriented software development. Teams will design and create medium-scale applications. Additional focus on the design and use of large object-oriented libraries, as well as social and professional issues.',
+    tags: ['OOP', 'SWE', 'Software Engineering'],
+  },
+  {
+    id: 'computer-ethics',
+    school: 'Saint Louis University',
+    classTakenName: 'Computer Ethics',
+    bgColor: '#003DA5',
+    date: 'Spring 2026',
+    description:
+      'This course is an introduction to thinking about these issues in a systematic manner through an ethical lens. We will confront a number of issues in computing and question their changes to our privacy and property rights, their effects on our security, and their relations to justice and fairness.',
+    tags: ['Ethics'],
+  },
+  {
+    id: 'algorithms',
+    school: 'Saint Louis University',
+    classTakenName: 'Algorithms',
+    bgColor: '#003DA5',
+    date: 'Spring 2026',
+    description:
+      'Introduction to analysis and complexity of algorithms. Big-O notation. Running time analysis of algorithms for traversing graphs and trees, searching and sorting. Recursive versus iterative algorithms. Complexity, completeness, computability.',
+    tags: ['Fundamentals', 'Computer Science', 'Mathematics'],
+  },
+
   // {
   //   id: '',
   //   school: 'Hanyang University',

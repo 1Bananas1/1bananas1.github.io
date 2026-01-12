@@ -1,3 +1,5 @@
+import { projectsData, getProjectAlignment } from '../data/projectDict'
+
 function Projects() {
   return (
     <div className="bg-dark-blue">
@@ -9,141 +11,91 @@ function Projects() {
         <h4 className="text-base font-mono mb-4 ml-4 text-white">
           Latest Projects
         </h4>
-        <article className="mb-16 relative">
-          <div className="grid grid-cols-1 md:grid-cols-10 items-start">
-            {/* Text content */}
 
-            <div className="md:col-span-7 md:col-start-1 md:row-start-1 md:relative md:z-10 px-4 text-left order-2 md:order-1">
-              <a
-                href="https://github.com/1Bananas1/FL-Studio-RP"
-                target="_blank"
-              >
-                <h3 className="text-3xl mb-6 text-white font-normal">
-                  FL Studio Rich Presence
-                </h3>
-              </a>
+        {projectsData.map((project, index) => {
+          const alignment = getProjectAlignment(index)
+          const isLeftAligned = alignment === 'left'
 
-              <div className="bg-swash-2 p-4 rounded-[10px] mb-6 shadow-lg">
-                <p className="text-base leading-relaxed text-white">
-                  What sprawled from a small thought quickly turned into me
-                  powering a community of music makers to show off their
-                  talents. Powered by C++, FL Studio Rich Presence utilizes
-                  inter-process communication to show off their activity inside
-                  FL Studio.
-                </p>
-              </div>
-              <h4 className="text-base font-mono mb-4 text-white">
-                Things I learned along the way
-              </h4>
-              <ul className="list-none p-0 m-0 flex flex-wrap justify-start gap-4 text-base">
-                <li className="text-white">Windows API</li>
-                <li className="text-white">C++</li>
-                <li className="text-white">Parsing</li>
-                <li className="text-white">Installers</li>
-              </ul>
-            </div>
-            {/* Image spans to edge */}
-            <div className="md:col-span-6 md:col-start-6 md:row-start-1 order-1 md:order-2">
-              <a
-                href="https://github.com/1Bananas1/FL-Studio-RP"
-                target="_blank"
-              >
-                <img
-                  className="w-full mt-8 mb-16 p-4 border-l border-t border-swash-4 rounded-[25px] md:mt-0"
-                  src="img\FLRP.webp"
-                  alt="FL Studio Rich Presence thumbnail"
-                />
-              </a>
-            </div>
-          </div>
-        </article>
-
-        {/* FlavorAI Project - Full width container */}
-        <article className="mb-16 relative">
-          <div className="grid grid-cols-1 md:grid-cols-10 items-start">
-            {/* Image spans from left edge */}
-            <div className="md:col-span-5 md:col-start-1 md:row-start-1">
-              <img
-                className="w-full mt-8 mb-16 p-4 border-l border-t border-swash-4 rounded-[25px] md:mt-0"
-                src="img\flavorAI.webp"
-                alt="FlavorAI screenshot"
-              />
-            </div>
-
-            {/* Text content overlaps image - extends to right edge */}
-            <div className="md:col-span-6 md:col-start-5 md:row-start-1 md:relative md:z-10 pr-4 md:pr-8 text-right">
-              <h4 className="text-white">
-                🏆{' '}
-                <span class="italic">
+          return (
+            <article key={project.id} className="mb-16 relative">
+              <div className="grid grid-cols-1 md:grid-cols-10 items-start">
+                {/* Text content */}
+                <div
+                  className={`md:col-span-7 md:row-start-1 md:relative md:z-10 ${
+                    isLeftAligned
+                      ? 'md:col-start-1 px-4 text-left order-2 md:order-1'
+                      : 'md:col-start-4 pr-4 md:pr-8 text-right order-2'
+                  }`}
+                >
+                  {project.hasAward && (
+                    <h4 className="text-white">
+                      🏆{' '}
+                      <span className="italic">
+                        <a
+                          href={project.awardURL}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {project.awardTitle}
+                        </a>
+                      </span>
+                    </h4>
+                  )}
                   <a
-                    href="https://gdg.community.dev/events/details/google-gdg-on-campus-washington-university-in-st-louis-st-louis-united-states-presents-devfest-washu-2025/"
+                    href={project.githubURL}
                     target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    WashU Google DevFest Hackathon Finalist
+                    <h3 className="text-3xl mb-6 text-white font-normal">
+                      {project.title}
+                    </h3>
                   </a>
-                </span>
-              </h4>
-              <h3 className="text-3xl mb-6 text-white font-normal">FlavorAI</h3>
-              <div className="bg-swash-2 p-4 rounded-[10px] mb-6 shadow-lg">
-                <p className="text-base leading-relaxed text-white">
-                  Utilizing the help from LLMs, I created an app to help pick
-                  foods FOR you so that you don't have to spend another second
-                  thinking what you should have to eat.
-                </p>
-              </div>
-              <h4 className="text-base font-mono mb-4 text-white">
-                Things I learned along the way
-              </h4>
-              <ul className="list-none p-0 m-0 flex flex-wrap justify-end gap-4 text-base">
-                <li className="text-white">React.js</li>
-                <li className="text-white">Expo</li>
-                <li className="text-white">Vertex API</li>
-                <li className="text-white">MongoDB</li>
-              </ul>
-            </div>
-          </div>
-        </article>
 
-        {/* pyTracker Project - Full width container, reversed */}
-        <article className="mb-16 relative">
-          <div className="grid grid-cols-1 md:grid-cols-10 items-start">
-            {/* Text content */}
-            <div className="md:col-span-7 md:col-start-1 md:row-start-1 md:relative md:z-10 px-4 text-left order-2 md:order-1">
-              <h3 className="text-3xl mb-6 text-white font-normal">
-                pyTracker
-              </h3>
-              <div className="bg-swash-2 p-4 rounded-[10px] mb-6 shadow-lg">
-                <p className="text-base leading-relaxed text-white">
-                  When applying to internships, I found out my friend applied to
-                  over 300 internships. Out of all of those internships, the
-                  only one he got was Google. While I'm pretty sure he just had
-                  a bad resume, many students still have to submit many
-                  applications. I created pyTracker to help applicants to keep
-                  track of the status of each of their jobs automatically using
-                  NLP technology.
-                </p>
-              </div>
-              <h4 className="text-base font-mono mb-4 text-white">
-                Things I learned along the way
-              </h4>
-              <ul className="list-none p-0 m-0 flex flex-wrap justify-start gap-4 text-base">
-                <li className="text-white">Ollama</li>
-                <li className="text-white">Rest APIs</li>
-                <li className="text-white">Google APIs</li>
-                <li className="text-white">NLP</li>
-              </ul>
-            </div>
+                  <div className="bg-swash-2 p-4 rounded-[10px] mb-6 shadow-lg">
+                    <p className="text-base leading-relaxed text-white">
+                      {project.description}
+                    </p>
+                  </div>
+                  <h4 className="text-base font-mono mb-4 text-white">
+                    Things I learned along the way
+                  </h4>
+                  <ul
+                    className={`list-none p-0 m-0 flex flex-wrap gap-4 text-base ${
+                      isLeftAligned ? 'justify-start' : 'justify-end'
+                    }`}
+                  >
+                    {project.tags.map((tag) => (
+                      <li key={tag} className="text-white">
+                        {tag}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
 
-            {/* Image spans to edge */}
-            <div className="md:col-span-6 md:col-start-6 md:row-start-1 order-1 md:order-2">
-              <img
-                className="w-full mt-8 mb-16 p-4 border-l border-t border-swash-4 rounded-[25px] md:mt-0"
-                src="img\pytracker.webp"
-                alt="pyTracker thumbnail"
-              />
-            </div>
-          </div>
-        </article>
+                {/* Image spans to edge */}
+                <div
+                  className={`md:row-start-1 ${
+                    isLeftAligned
+                      ? 'md:col-span-6 md:col-start-6 order-1 md:order-2'
+                      : 'md:col-span-5 md:col-start-1 order-1'
+                  }`}
+                >
+                  <a
+                    href={project.githubURL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      className="w-full mt-8 mb-16 p-4 border-l border-t border-swash-4 rounded-[25px] md:mt-0"
+                      src={project.imageURL}
+                      alt={`${project.title} thumbnail`}
+                    />
+                  </a>
+                </div>
+              </div>
+            </article>
+          )
+        })}
       </section>
     </div>
   )

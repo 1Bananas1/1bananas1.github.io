@@ -1,5 +1,5 @@
-import Contact from "../components/Contact";
-import Projects from "../components/Projects";
+import Contact from '../components/Contact'
+import Projects from '../components/Projects'
 function Home() {
   return (
     <>
@@ -8,15 +8,15 @@ function Home() {
         className="py-16 px-4 pb-40 pl-4 max-w-[1200px] mx-auto"
       >
         <p className="text-base/6">
-          Hey! My name is{" "}
-          <span className="text-7xl text-swash-5 block">Jimmy</span>{" "}
+          Hey! My name is{' '}
+          <span className="text-7xl text-swash-5 block">Jimmy</span>{' '}
         </p>
         <h2 className="text-[4rem] font-normal">I'm a student</h2>
         <p className="text-base/6">
-          I am currently attending Hanyang University in Seoul, South Korea
+          I am currently attending Saint Louis University in St. Louis, Missouri
         </p>
         <p className="text-base/6">
-          Currently, I'm learning Linear Algebra, AI Agents, and Frontend
+          Currently, I'm learning Software Engineering, Algorithms, and Computing Priniciples
         </p>
         <p></p>
       </section>
@@ -25,7 +25,7 @@ function Home() {
       <Contact />
       <div className="gradient" />
     </>
-  );
+  )
 }
 
-export default Home;
+export default Home
