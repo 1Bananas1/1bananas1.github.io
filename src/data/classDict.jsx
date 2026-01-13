@@ -148,7 +148,7 @@ export const classesData = [
     date: 'Fall 2025',
     description:
       'Math intense course covering fundamental artificial intelligence methods and equations.',
-    tags: ['Computer Science'],
+    tags: ['Computer Science', 'AI', 'Essential'],
   },
   {
     id: 'NLP',
