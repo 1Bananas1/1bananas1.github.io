@@ -141,6 +141,16 @@ export const classesData = [
     tags: ['Computer Science'],
   },
   {
+    id: 'artificial-intelligence',
+    school: 'Hanyang University',
+    classTakenName: 'Artificial Intelligence',
+    bgColor: '#1D2475',
+    date: 'Fall 2025',
+    description:
+      'Math intense course covering fundamental artificial intelligence methods and equations.',
+    tags: ['Computer Science'],
+  },
+  {
     id: 'NLP',
     school: 'Hanyang University',
     classTakenName: 'Natural Language Processing',
