@@ -200,6 +200,20 @@ export const classesData = [
       'Introduction to analysis and complexity of algorithms. Big-O notation. Running time analysis of algorithms for traversing graphs and trees, searching and sorting. Recursive versus iterative algorithms. Complexity, completeness, computability.',
     tags: ['Fundamentals', 'Computer Science', 'Mathematics'],
   },
+  {
+    id: 'principles-computing-systems',
+    school: 'Saint Louis University',
+    classTakenName: 'Principles of Computing Systems',
+    bgColor: '#003DA5',
+    date: 'Spring 2026',
+    description:
+      'This course teaches students to design performant, scalable, and secure software systems through concurrent and parallel programming, process management, and network communication. Students will gain hands-on experience with C programming, systems architecture, and critical concepts like race conditions, mutual exclusion, and deadlock prevention. Through labs and studios, students learn to optimize how systems execute while understanding security principles essential for modern software engineering.',
+    tags: [
+      'Systems Programming',
+      'Computer Science',
+      'Concurrency Network Programming',
+    ],
+  },
 
   // {
   //   id: '',
