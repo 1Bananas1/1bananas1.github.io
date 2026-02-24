@@ -97,7 +97,7 @@ export const classesData = [
     date: 'Fall 2024',
     description:
       'This course advances beyond BTM 2500, focusing on three key areas: data cleaning and preparation using OpenRefine and R, advanced visualization development with Tableau and R for data storytelling, and predictive analytics techniques including regression and decision trees to predict business events and solve business problems.',
-    tags: ['Business Technology Management', 'BTM'],
+    tags: ['Business Technology Management', 'BTM', 'AI'],
   },
   {
     id: 'ml-business-analytics',
@@ -107,7 +107,7 @@ export const classesData = [
     date: 'Spring 2025',
     description:
       'This course teaches core machine learning concepts and techniques for extracting insights from large structured and unstructured datasets to solve complex business problems. Students will use R to apply ML algorithms across various business domains including healthcare, supply chain, and banking to improve decision-making and gain valuable business insights.',
-    tags: ['Business Technology Management', 'BTM'],
+    tags: ['Business Technology Management', 'BTM', 'AI'],
   },
   {
     id: 'react-native-v3',
@@ -120,6 +120,111 @@ export const classesData = [
     tags: ['Bootcamp', 'React'],
     githubURL: 'https://github.com/1Bananas1/taskly',
   },
+  {
+    id: 'database-systems',
+    school: 'Hanyang University',
+    classTakenName: 'Database Systems',
+    bgColor: '#1D2475',
+    date: 'Fall 2025',
+    description:
+      'Comprehensive introduction to DBMS principles, design & application. Covers Entity-Relationship modeling, relational database design, SQL mastery, normalization theory, indexing strategies, data storage optimization, transaction management & concurrency control. Hands-on experience building database-driven applications.',
+    tags: ['SQL', 'Databases', 'BTM', 'Computer Science'],
+  },
+  {
+    id: 'software-engineering',
+    school: 'Hanyang University',
+    classTakenName: 'Software Engineering',
+    bgColor: '#1D2475',
+    date: 'Fall 2025',
+    description:
+      'Industry collaboration with LG Electronics developing innovative appliance services. Covers software lifecycle, requirements analysis, UML modeling, system architecture, testing & project management. Major group project presenting to partner companies with potential internship opportunities.',
+    tags: ['Computer Science'],
+  },
+  {
+    id: 'artificial-intelligence',
+    school: 'Hanyang University',
+    classTakenName: 'Artificial Intelligence',
+    bgColor: '#1D2475',
+    date: 'Fall 2025',
+    description:
+      'Math intense course covering fundamental artificial intelligence methods and equations.',
+    tags: ['Computer Science', 'AI', 'Essential'],
+  },
+  {
+    id: 'NLP',
+    school: 'Hanyang University',
+    classTakenName: 'Natural Language Processing',
+    bgColor: '#1D2475',
+    date: 'Fall 2025',
+    description:
+      'Master fundamental NLP concepts from word vectors to large language models. Covers neural networks, RNNs, transformers, seq2seq, attention mechanisms, language generation, question answering & multilingual processing. Practical implementation experience with cutting-edge AI technologies like ChatGPT.',
+    tags: ['Computer Science', 'AI'],
+  },
+  {
+    id: 'prob-and-stats',
+    school: 'Hanyang University',
+    classTakenName: 'Probability and Statistics',
+    bgColor: '#1D2475',
+    date: 'Fall 2025',
+    description:
+      'Statistical methodology for data interpretation and analysis in urban planning processes. Covers descriptive statistics, probability theory, estimation, and hypothesis testing at pre-calculus level. Foundation for understanding data analysis techniques used in planning and engineering applications.',
+    tags: ['Fundamentals', 'Statistics'],
+  },
+  {
+    id: 'oop-sw-design',
+    school: 'Saint Louis University',
+    classTakenName: 'Object Oriented Programming Software Design',
+    bgColor: '#003DA5',
+    date: 'Spring 2026',
+    description:
+      'An implementation-based study of object-oriented software development. Teams will design and create medium-scale applications. Additional focus on the design and use of large object-oriented libraries, as well as social and professional issues.',
+    tags: ['OOP', 'SWE', 'Software Engineering'],
+  },
+  {
+    id: 'computer-ethics',
+    school: 'Saint Louis University',
+    classTakenName: 'Computer Ethics',
+    bgColor: '#003DA5',
+    date: 'Spring 2026',
+    description:
+      'This course is an introduction to thinking about these issues in a systematic manner through an ethical lens. We will confront a number of issues in computing and question their changes to our privacy and property rights, their effects on our security, and their relations to justice and fairness.',
+    tags: ['Ethics'],
+  },
+  {
+    id: 'algorithms',
+    school: 'Saint Louis University',
+    classTakenName: 'Algorithms',
+    bgColor: '#003DA5',
+    date: 'Spring 2026',
+    description:
+      'Introduction to analysis and complexity of algorithms. Big-O notation. Running time analysis of algorithms for traversing graphs and trees, searching and sorting. Recursive versus iterative algorithms. Complexity, completeness, computability.',
+    tags: ['Fundamentals', 'Computer Science', 'Mathematics'],
+  },
+  {
+    id: 'principles-computing-systems',
+    school: 'Saint Louis University',
+    classTakenName: 'Principles of Computing Systems',
+    bgColor: '#003DA5',
+    date: 'Spring 2026',
+    description:
+      'This course teaches students to design performant, scalable, and secure software systems through concurrent and parallel programming, process management, and network communication. Students will gain hands-on experience with C programming, systems architecture, and critical concepts like race conditions, mutual exclusion, and deadlock prevention. Through labs and studios, students learn to optimize how systems execute while understanding security principles essential for modern software engineering.',
+    tags: [
+      'Systems Programming',
+      'Computer Science',
+      'Concurrency Network Programming',
+    ],
+  },
+
+  // {
+  //   id: '',
+  //   school: 'Hanyang University',
+  //   classTakenName: '',
+  //   bgColor: '#1D2475',
+  //   date: 'Fall 2025',
+  //   description:
+  //     '',
+  //   tags: [],
+  // },
 ]
 // cls could be named literally anything but it just stands for class
 export const getClassesBySchool = (school) => {
