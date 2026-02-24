@@ -48,6 +48,14 @@ function Navbar() {
           </Link>
         </li>
         <li>
+          <Link
+            to="/reading-list"
+            className="text-white no-underline block hover:text-swash-4"
+          >
+            Reading List
+          </Link>
+        </li>
+        <li>
           <a
             href="https://www.linkedin.com/in/jimmy-macdonald/"
             target="_blank"

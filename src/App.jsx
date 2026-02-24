@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import Contact from "./components/Contact";
 import Projects from "./components/Projects";
 import Classes from "./pages/Classes";
+import ReadingList from "./pages/ReadingList";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/classes" element={<Classes />} />
+          <Route path="/reading-list" element={<ReadingList />} />
         </Routes>
         <Footer />
       </div>

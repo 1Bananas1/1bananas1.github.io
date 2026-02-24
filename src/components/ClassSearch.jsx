@@ -1,4 +1,4 @@
-function ClassSearch({ searchTerm, setSearchTerm }) {
+function ClassSearch({ searchTerm, setSearchTerm, placeholder = 'Search by class name or tag...' }) {
   const handleInputChange = (e) => {
     const searchValue = e.target.value
     setSearchTerm(searchValue)
@@ -9,7 +9,7 @@ function ClassSearch({ searchTerm, setSearchTerm }) {
       type="text"
       value={searchTerm}
       onChange={handleInputChange}
-      placeholder="Search by class name or tag..."
+      placeholder={placeholder}
       className="w-full p-2 rounded-2xl border"
     />
   )
