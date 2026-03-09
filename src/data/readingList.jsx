@@ -55,6 +55,16 @@ export const papersData = [
     tags: ['AI Agents', 'Software Engineering', 'Coding'],
     notes: '',
   },
+  {
+    id: 'meta-context-engineering',
+    title: 'Meta Context Engineering via Agentic Skill Evolution',
+    authors: 'Haoran Ye, Xuning He, Vincent Arak, Haonan Dong, Guojie Song',
+    dateRead: 'Spring 2026',
+    url: 'https://arxiv.org/abs/2601.21557',
+    tags: ['AI Agents', 'Context Engineering', 'Meta-Learning'],
+    notes:
+      'Bi-level framework for context optimization where a meta-level agent refines engineering skills through deliberative search. Demonstrates 5.6-53.8% improvement over state-of-the-art agentic CE methods.',
+  },
 ]
 
 const SEMESTER_MONTH = { Spring: 2, Summer: 6, Fall: 9 }
