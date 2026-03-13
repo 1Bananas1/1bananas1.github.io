@@ -91,6 +91,15 @@ export const papersData = [
     tags: ['LLMs', 'Prompt Compression', 'NeurIPS 2023'],
     notes: '',
   },
+  {
+    id: 'path-autonomous-intelligence',
+    title: 'A Path Towards Autonomous Machine Intelligence',
+    authors: 'Yann LeCun',
+    dateRead: 'March 2026',
+    url: 'https://openreview.net/forum?id=BZ5a1r-kVsf',
+    tags: ['AI', 'Autonomous Agents', 'World Models', 'Self-Supervised Learning'],
+    notes: '',
+  },
 ]
 
 const SEMESTER_MONTH = { Spring: 2, Summer: 6, Fall: 9 }
